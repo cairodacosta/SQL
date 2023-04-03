@@ -1,0 +1,18 @@
+CREATE TABLE cairosclothing (id INTEGER PRIMARY KEY, name TEXT, color TEXT, price INTEGER, quantity INTEGER);
+INSERT INTO cairosclothing VALUES (1, "socks", "white", 1,100);
+INSERT INTO cairosclothing VALUES (2, "tshirts", "blue", 10, 150);
+INSERT INTO cairosclothing VALUES (3, "hoodies", "green", 15, 100);
+INSERT INTO cairosclothing VALUES (4, "pants", "brown", 20, 150);
+INSERT INTO cairosclothing VALUES (5, "shorts", "black", 15, 150); 
+INSERT INTO cairosclothing VALUES (6, "long sleeve tops", "cream", 15, 100);
+INSERT INTO cairosclothing VALUES (7, "crop tops", "purlple", 10, 150);
+INSERT INTO cairosclothing VALUES(8, "jackets", "black", 20, 100);
+INSERT INTO cairosclothing VALUES (9,"undershirts", "white", 5, 100);
+INSERT INTO cairosclothing VALUES (10, "underwear", "red", 5,150);
+INSERT INTO cairosclothing VALUES (11, "dresses", "black", 25, 150);
+INSERT INTO cairosclothing VALUES (12, "skirts", "grey", 15, 100);
+INSERT INTO cairosclothing VALUES (13, "bras", "white", 15, 100);
+INSERT INTO cairosclothing VALUES (14, "leggings", "black", 15, 150);
+INSERT INTO cairosclothing VALUES (15, "flannels", "pink", 20,100);
+SELECT * FROM cairosclothing ORDER BY price; 
+SELECT SUM(price) FROM cairosclothing;
