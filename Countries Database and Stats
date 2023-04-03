@@ -1,4 +1,3 @@
-/* Put your data in here and query it! */
 CREATE TABLE countries(
    name                    TEXT PRIMARY KEY,
    population              INTEGER,
@@ -221,10 +220,12 @@ HAVING fertility_rate>5.0;
 SELECT median_age FROM countries 
 GROUP BY median_age HAVING median_age >20;
 
+SELECT population FROM countries GROUP BY population HAVING population<1000000 ;
+
 /*CASE*/
 SELECT fertility_rate, CASE  
 WHEN fertility_rate >5 THEN "high_fertility_rate"
 WHEN  fertility_rate< 2.0 THEN "low_fertility_rate"
 ELSE "medium_fertility_rate" END AS "fertility_rate_high_low"
 FROM countries ORDER BY fertility_rate;
-SELECT name,fertility_rate >3 AND median_age>18 FROM countries 
+SELECT name,fertility_rate >3 AND median_age>18 FROM countries ;
