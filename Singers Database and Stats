@@ -1,0 +1,49 @@
+CREATE TABLE singers (
+id INTEGER PRIMARY KEY AUTOINCREMENT, 
+name TEXT, 
+age INTEGER, 
+sex TEXT);
+
+    INSERT INTO singers (name, age, sex) 
+    VALUES ("Tay Swift", 33, "F");
+    INSERT INTO singers (name, age, sex) 
+    VALUES("Justin Biebs", 29, "M");
+    INSERT INTO singers (name, age, sex) 
+    VALUES("Selena Mez", 32, "F");
+    INSERT INTO singers (name, age, sex) 
+    VALUES("Katy Pretty", 45, "F");
+    INSERT INTO singers (name, age, sex) 
+    VALUES("Sam Sand",38, "M");
+    INSERT INTO singers (name, age, sex) 
+    VALUES("Lana Ray", 35, "F");
+    INSERT INTO singers (name, age, sex) 
+    VALUES ("Jason Dean", 40, "M");
+    INSERT INTO singers (name, age, sex) 
+    VALUES( "Miley Smiles", 29, "F");
+    INSERT INTO singers (name, age, sex) 
+    VALUES ("Trey Love", 22, "M");
+    INSERT INTO singers (name, age, sex) 
+    VALUES("Cary Wood", 39, "F");
+SELECT * FROM singers;
+
+CREATE TABLE pets (
+id INTEGER PRIMARY KEY AUTOINCREMENT, 
+type TEXT, 
+name TEXT, 
+age TEXT);
+
+INSERT INTO pets VALUES (1, "cat", "bubbles", "16");
+INSERT INTO pets VALUES ( 2, "dog", "shaggy", "7");
+INSERT INTO pets VALUES ( 3, "bird", "birdy", "21");
+INSERT INTO pets VALUES ( 4, "cat", "joey", "9");
+INSERT INTO pets VALUES ( 5, "dog", "max", "4");
+INSERT INTO pets VALUES ( 6, "dog", "leo", "12");
+INSERT INTO pets VALUES ( 7, "cat", "george", "3");
+INSERT INTO pets VALUES ( 8, "horse", "simon", "6");
+INSERT INTO pets VALUES ( 9, "dog", "barkley", "2");
+INSERT INTO pets VALUES ( 10, "cat", "lady", "4");
+
+SELECT s.name, p.type, p.age
+    FROM singers s
+    LEFT OUTER JOIN pets p 
+    ON s.id=p.id; 
